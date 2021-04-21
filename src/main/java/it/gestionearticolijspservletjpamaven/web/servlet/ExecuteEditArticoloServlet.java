@@ -31,7 +31,6 @@ public class ExecuteEditArticoloServlet extends HttpServlet {
 		
 		Date dataArrivoParsed = UtilityArticoloForm.parseDateArrivoFromString(dataArrivoStringParam);
 
-		
 		if (!UtilityArticoloForm.validateInput(codiceInputParam, descrizioneInputParam, prezzoInputStringParam,
 				dataArrivoStringParam) || dataArrivoParsed == null) {
 			

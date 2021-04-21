@@ -15,11 +15,10 @@ import it.gestionearticolijspservletjpamaven.utility.UtilityArticoloForm;
 
 @WebServlet("/ExecuteInsertArticoloServlet")
 public class ExecuteInsertArticoloServlet extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
 
-	public ExecuteInsertArticoloServlet() {
-		super();
-	}
+	public ExecuteInsertArticoloServlet() {}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

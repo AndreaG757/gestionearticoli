@@ -13,6 +13,7 @@ import it.gestionearticolijspservletjpamaven.service.MyServiceFactory;
 
 @WebServlet("/PrepareEditArticoloServlet")
 public class PrepareEditArticoloServlet extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
        
     public PrepareEditArticoloServlet() {

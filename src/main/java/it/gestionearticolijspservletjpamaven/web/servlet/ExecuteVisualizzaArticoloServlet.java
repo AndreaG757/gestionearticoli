@@ -14,10 +14,11 @@ import it.gestionearticolijspservletjpamaven.service.MyServiceFactory;
 
 @WebServlet("/ExecuteVisualizzaArticoloServlet")
 public class ExecuteVisualizzaArticoloServlet extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String idArticoloParam = request.getParameter("idArticolo");
 
 		if (!NumberUtils.isCreatable(idArticoloParam)) {
@@ -28,8 +29,7 @@ public class ExecuteVisualizzaArticoloServlet extends HttpServlet {
 		}
 
 		try {
-			request.setAttribute("visualizza_articolo_attr", MyServiceFactory.getArticoloServiceInstance()
-					.caricaSingoloElemento(Long.parseLong(idArticoloParam)));
+			request.setAttribute("visualizza_articolo_attr", MyServiceFactory.getArticoloServiceInstance().caricaSingoloElemento(Long.parseLong(idArticoloParam)));
 		} catch (Exception e) {
 			// qui ci andrebbe un messaggio nei file di log costruito ad hoc se fosse attivo
 			e.printStackTrace();
